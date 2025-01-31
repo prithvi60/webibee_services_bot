@@ -44,8 +44,10 @@ def analyze_job_post(job_post):
     
     Based on the available data about our services, determine:
     - If our services match at least 70% of the job post requirements.
-    - If the match is lower than 70%, respond that we should not take the job and explain why.
-    - If the match is higher than 70%, highlight the specific services that match and explain why we are a good fit.
+    - If the match is lower than 70%, explicitly include the phrase **'we should not take this job'** in your response.
+    - If the match is higher than 70%, explicitly include the phrase **'we should take this job'** in your response.
+    - If the match is uncertain or borderline, explicitly include the phrase **'uncertain match, requires further review'** in your response.
+    - Highlight the specific services that match and explain why we are a good fit.
     - Suggest minor tweaks in our approach if required.
     
     Here is the job description:
@@ -54,7 +56,7 @@ def analyze_job_post(job_post):
     Based on our available services:
     {matching_services}
     
-    Provide an evaluation with a percentage match, reasoning for the decision, and a recommendation.
+    Provide an evaluation with a percentage match, reasoning for the decision, and a clear recommendation using the specified keywords.
     """
     
     formatted_prompt = prompt_template.format(job_post=job_post, matching_services=matching_services)
@@ -77,34 +79,37 @@ def main():
         
         # Keywords that indicate a bad fit
         negative_keywords = [
+            "we should not take this job",
             "does not match",
             "not a good fit",
             "significant mismatch",
             "not suitable",
-            "less than 70%",
-            "we should not take this job",
-            "do not match at least 70% of the requirements",
-            "Since our services do not align with the specific requirements of this job"
+            "less than 70%"
         ]
         
         # Keywords that indicate a good fit
         positive_keywords = [
+            "we should take this job",
             "match more than 70%",
             "recommend taking this job",
-            "we are a good fit",
-            "we should take this job"
+            "we are a good fit"
+        ]
+        
+        # Keywords that indicate uncertainty
+        uncertain_keywords = [
+            "uncertain match, requires further review",
+            "borderline case",
+            "may not fully match"
         ]
 
         if any(keyword in result.lower() for keyword in negative_keywords):
             st.error("🚫 Not a good fit:\n" + result.strip())
         elif any(keyword in result.lower() for keyword in positive_keywords):
             st.success("✅ We can take it!\n" + result.strip())
+        elif any(keyword in result.lower() for keyword in uncertain_keywords):
+            st.warning("⚠️ Uncertain match, please review:\n" + result.strip())
         else:
-            # st.warning("⚠️ Unable to determine fit. Please review manually:\n" + result.strip())
-            st.error("🚫 Not a good fit:\n" + result.strip())
-
-        # st.info("Okay lets see!:\n" + result.strip())
-
+            st.warning("⚠️ Unable to determine fit. Please review manually:\n" + result.strip())
 
 if __name__ == '__main__':
     main()

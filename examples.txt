@@ -1,0 +1,147 @@
+Negative:
+
+
+Interior Design for Living Room Remodel from Sun Room
+Posted yesterday
+Worldwide
+We are seeking an experienced interior designer to help transform our sun room into a stunning living room. You will receive photos of the existing space along with our desired style to guide your design process. Your creativity and expertise will be essential in ensuring the new design meets our vision and functional needs. The project includes space planning, color scheme selection, furniture arrangement, and decor suggestions. If you are passionate about creating beautiful and functional living spaces, we would love to collaborate with you!
+
+$150.00
+
+Fixed-price
+Intermediate
+Experience Level
+Remote Job
+Ongoing project
+Project Type
+Skills and Expertise
+Residential Design
+Interior Design
+Activity on this job
+Proposals:
+15 to 20
+Last viewed by client:
+yesterday
+Interviewing:
+4
+Invites sent:
+7
+Unanswered invites:
+1
+About the client
+Member since Nov 19, 2022
+USA
+Hopkinton 10:48 AM
+$190 total spent
+1 hire, 0 active
+
+postive:
+
+Next.js, Tailwind nest.js, graphql Typescript developer
+Posted 1 hour ago
+Worldwide
+Technologies : Next.Js, Recoil and React query (for the state management), Typescript, Jest, Enzyme and Storybook. Sonarqube. Graphql and nodejs (Nest.js)
+
+Hello, I am looking for a developer (fullstack) who is able to understand and work on an existing project. It is a social marketplace with 4 microfrontends (market, buyer, seller, and admin). The frontend is developed with Next.js tailwind, graphql, react query enzyme, recoil.  On the backend side, it’s a microservice architecture with nest.js, prisma, graphql, elasticsearch, some kafka and mongodb
+
+Your goal is to check if everything comes together perfectly and if not, we will have to find solutions to improve things (debug, fix bugs, fix, declare things not declare. UI/UX design improvements on existing codes, Create new and use existing codes to build dynamic components, Build new pages and features.
+
+You have to be focus on performance, security, best practices, PWA.
+You have to refactoring the code (there is a lot of redundant codes).
+
+The ideal candidate should have a strong background in software architecture, with experience in designing and implementing architectures for web applications. Strong analytical and problem-solving skills are essential, as well as the ability to communicate effectively with the development team.
+
+3 - 6 month of work
+
+PS : DON’T BID IF YOU ARE NOT FLUENT IN ENGLISH, IF YOU DON’T THE REQUIREMENTS SKILLS AND IF YOU WANT TO NEGOCIATE ON PRICE
+
+More than 30 hrs/week
+Hourly
+< 1 month
+Duration
+Intermediate
+Experience Level
+$3.00
+
+-
+
+$4.00
+
+Hourly
+Remote Job
+One-time project
+Project Type
+Contract-to-hire opportunity
+This lets talent know that this job could become full time.
+Learn more
+Skills and Expertise
+Full Stack Development Skills
+React
+Microservice
+Full Stack Development Languages
+GraphQL
+Databases
+MongoDB
+Other
+TypeScript
+Tailwind CSS
+Activity on this job
+Proposals:
+5 to 10
+Last viewed by client:
+54 minutes ago
+Interviewing:
+0
+Invites sent:
+4
+Unanswered invites:
+4
+
+Ambiguous
+
+Generative AI Automation Expert for Next.js AI Product Bug Fix
+Posted 5 minutes ago
+Worldwide
+I’ve developed an AI-driven Ad creation tool that uses Next.js, Plasmic for the frontend, and is deployed on Vercel. The backend operations rely on the Make, which runs various automation flows, including Generative AI functionalities.
+After the latest deployment, a critical bug has emerged in the Ad image generation flow. The tool is supposed to generate effective prompts for Midjourney to create ads using user information. However, for some users, the app inconsistently fails to generate any ads. This issue is a top priority and needs immediate resolution.
+This is an urgent issue, so timely responses will be prioritized. I aim to engage a specialist as soon as possible.
+
+Less than 30 hrs/week
+Hourly
+< 1 month
+Duration
+Expert
+Experience Level
+$15.00
+
+-
+
+$100.00
+
+Hourly
+Remote Job
+One-time project
+Project Type
+Skills and Expertise
+Full Stack Development Skills
+Next.js
+Other
+React
+Activity on this job
+Proposals:
+Less than 5
+Interviewing:
+0
+Invites sent:
+0
+Unanswered invites:
+0
+About the client
+Member since May 8, 2018
+United States
+Charlotte 12:53 PM
+$3.1K total spent
+6 hires, 3 active
+71 hours
+Sales & Marketing
+Small company (2-9 people)
