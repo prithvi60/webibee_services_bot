@@ -103,5 +103,8 @@ def main():
             # st.warning("⚠️ Unable to determine fit. Please review manually:\n" + result.strip())
             st.error("🚫 Not a good fit:\n" + result.strip())
 
+        # st.info("Okay lets see!:\n" + result.strip())
+
+
 if __name__ == '__main__':
     main()
