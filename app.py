@@ -55,33 +55,6 @@ def analyze_job_post(job_post):
     {matching_services}
     
     Provide an evaluation with a percentage match, reasoning for the decision, and a recommendation.
-    
-    Example job post:
-    Full Stack Developer Needed for Online Marketplace Development
-    Posted 7 minutes ago
-    Worldwide
-    We are seeking a talented full stack developer to assist in building our online marketplace. The ideal candidate will have experience in both front-end and back-end development, as well as a strong understanding of e-commerce platforms. You will work closely with our team to create a user-friendly and visually appealing marketplace. Familiarity with payment gateways and responsive design is a must. If you're passionate about creating seamless online experiences, we would love to hear from you!
-    
-    More than 30 hrs/week
-    Hourly
-    1-3 months
-    Duration
-    Expert
-    Experience Level
-    $12.00 - $17.00 Hourly
-    Remote Job
-    Ongoing project
-    Project Type: Contract-to-hire
-    This job has the potential to turn into a full-time role
-    
-    Skills and Expertise:
-    - Full Stack Development Skills
-    - Tailwind CSS
-    - React
-    - Next.js
-    - Databases (PostgreSQL)
-    - JavaScript
-    - Web Development
     """
     
     formatted_prompt = prompt_template.format(job_post=job_post, matching_services=matching_services)
@@ -90,20 +63,45 @@ def analyze_job_post(job_post):
 
 # 4. Build an app with Streamlit
 def main():
-    st.set_page_config(page_title="Ask Webibee - Job Match Analysis", page_icon=":rocket:")
-    st.title(":rocket: Webibee Job Compatibility Analyzer")
-    st.write("Paste an Upwork job post below, and we will analyze if we should take it.")
+    st.set_page_config(page_title="Ask Webibee - Job Match Analysis", page_icon="🦾")
+    st.title("Ask Webibee 🦾")
+    st.write("Let's see if we can take up this job!")
     
-    job_post = st.text_area("Paste the Upwork Job Post Here")
+    job_post = st.text_area("Paste the Upwork Job Post Here", height=350)
 
     if job_post:
         st.write("Analyzing your job requirement...")
         result = analyze_job_post(job_post)
+
+        # print("DEBUG OUTPUT:", result.lower())
         
-        if "should not take the job" in result.lower():
-            st.error(f"🚫 Not a good fit: **{result.strip()}**")
+        # Keywords that indicate a bad fit
+        negative_keywords = [
+            "does not match",
+            "not a good fit",
+            "significant mismatch",
+            "not suitable",
+            "less than 70%",
+            "we should not take this job",
+            "do not match at least 70% of the requirements",
+            "Since our services do not align with the specific requirements of this job"
+        ]
+        
+        # Keywords that indicate a good fit
+        positive_keywords = [
+            "match more than 70%",
+            "recommend taking this job",
+            "we are a good fit",
+            "we should take this job"
+        ]
+
+        if any(keyword in result.lower() for keyword in negative_keywords):
+            st.error("🚫 Not a good fit:\n" + result.strip())
+        elif any(keyword in result.lower() for keyword in positive_keywords):
+            st.success("✅ We can take it!\n" + result.strip())
         else:
-            st.success(f"✅ We can take it! **{result.strip()}**")
+            # st.warning("⚠️ Unable to determine fit. Please review manually:\n" + result.strip())
+            st.error("🚫 Not a good fit:\n" + result.strip())
 
 if __name__ == '__main__':
     main()
